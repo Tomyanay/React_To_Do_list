@@ -1,0 +1,13 @@
+
+
+[build]
+  # Where Netlify looks for your production-ready files
+  publish = "build"
+  # How to build your React app
+  command = "npm run build"
+
+# Redirect all routes to index.html so React Router handles them
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

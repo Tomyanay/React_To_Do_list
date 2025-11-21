@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --react-blue: #61dafb;
+    --react-dark-blue: #1c2b4d;
+    --react-light-gray: #f0f0f0;
+    --react-cyan: #21a1f1;
+    --react-white: #ffffff;
+
+    --body_bg:#b8abab;
+}
+
+body {
+    font-family: "Bebas Neue", sans-serif;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--body_bg);  
+}
+
+/* ====================== BASIC LAYOUT ====================== */
+
+.box {
+    border: 3px solid var(--react-dark-blue);
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px var(--react-light-gray),-3px -3px 3px var(--react-light-gray);
+    width: 600px;
+    height: auto;
+}
+
+.title {
+    border-bottom: 2px solid var(--react-dark-blue);
+    height: 100px;
+    background-image: linear-gradient(120deg, var(--react-blue), var(--react-cyan));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px 5px 0 0;
+}
+
+.title img {
+    width: 60px;
+    height: 60px;
+    margin: 0 10px 10px 0;
+    animation: spin  10s infinite linear  forwards ;
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.title h1 {
+    margin-left: 10px;
+    color: var(--react-dark-blue);
+    text-shadow: 1px 1px 1px var(--react-cyan);
+    font-size: 2.2rem;
+}
+
+nav {
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--react-dark-blue);
+    box-shadow: 0px 1px 1px var(--react-light-gray);
+    background-color: var(--react-dark-blue);
+}
+
+a {
+    color: rgb(37, 37, 236);
+    text-decoration: none;
+}
+
+.mainlink,
+footer p {
+    color: var(--react-cyan);
+    font-size: 1.6rem;
+    letter-spacing: 1.2px;
+    font-weight: 400;
+}
+
+.mainlink:hover {
+    background-color: var(--react-light-gray);
+}
+
+.active {
+    color: var(--react-blue);
+    border-bottom: 2px solid;
+}
+
+.Home, .About, .Edit, .Add_Post {
+    height: 595px;
+    background-image: linear-gradient(
+        130deg,
+        var(--react-light-gray),
+        var(--react-cyan),
+        var(--react-white)
+    );
+}
+
+footer {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--react-dark-blue);
+    border-radius: 0 0 5px 5px;
+}
+
+/* ====================== ABOUT ====================== */
+
+.About h1 {
+    padding: 10px;
+    color: var(--react-dark-blue);
+    text-shadow: 1px 1px 2px;
+    font-size: 2.3rem;
+    text-decoration: underline;
+}
+
+.About p {
+    padding: 10px;
+    font-size: 1.2rem;
+    letter-spacing: 1.1px;
+}
+
+.Style{ 
+    font-family: monospace;
+    color: var(--react-dark-blue);
+    text-transform: capitalize;
+}
+
+.Style p{
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.Picker{
+    display: flex;
+    justify-content: center;
+}
+
+.Change_Buttons{
+    display:  flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.Change_Buttons button{
+    height: 30px;
+    width: 110px;
+    cursor: pointer;
+    font-weight: 600;
+    border: 2px solid var(--react-blue);
+    border-radius: 10px;
+}
+
+/* ====================== ADD NEW POST ====================== */
+
+.Add_Post h2,.Edit h2 {
+    padding-top: 15px;
+    color: var(--react-dark-blue);
+    text-shadow: 1px 1px 2px;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.add_form {
+    height: 80%;
+    font-size: 1.5rem;
+}
+
+.tag {
+    display: flex;
+    flex-flow: column;
+}
+
+.tag1, .tag2 {
+    margin: 40px 10px;
+}
+
+label {
+    font-size: 1.2rem;
+    color: var(--react-dark-blue);
+    text-shadow: 1px 1px 2px;
+}
+
+input, textarea {
+    outline: none;
+    padding-left: 5px;
+    border: 2px solid darkgray;
+}
+
+#title {
+    height: 35px;
+}
+
+textarea {
+    resize: none;
+    height: 180px;
+    padding-top: 5px;
+}
+
+.bSubmit {
+    margin: 0px 10px;
+    height: 50px;
+}
+
+.Submit {
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--react-blue);
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--react-dark-blue);
+    font-weight: 600;
+}
+
+.Submit:hover,.Apply button:hover,.Change_Buttons button:hover {
+    background-color: var(--react-cyan);
+    border: 2px solid var(--react-dark-blue);
+}
+
+.Add_Post p,.Edit p{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.2rem;
+    font-family: 'Courier New';
+}
+
+/* ====================== HOME ====================== */
+
+.Search {
+    text-align: center;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Search label {
+    font-size: 1.5rem;
+}
+
+.Search input {
+    margin-left: 20px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+.listitems {
+    overflow: auto;
+    height: 89%;
+}
+
+.itemContainer {
+    margin: 20px;
+    padding-left: 5px;
+}
+
+.itemContainer:hover {
+    transition: all .5s ease-in-out;
+    transform: scale(1.07);
+}
+
+.itemContainer h1 {
+    color: var(--react-dark-blue);
+    text-shadow: 1px 1px 2px;
+    font-size: 1.8rem;
+    margin-bottom: -5px;
+}
+
+.time {
+    color: #d8cbcb93;
+    text-shadow: 1px 1px 1px rgb(82, 80, 80);
+    margin-bottom: 10px;
+}
+
+.value {
+    margin-bottom: 15px;
+    color: #0b507a;
+    text-shadow: 1px 2px 1px rgb(88, 87, 87);
+}
+
+hr {
+    color: var(--react-dark-blue);
+}
+
+.highlight{
+
+    filter: brightness(1.5);
+    animation: big 5s infinite .5s  forwards ease-in-out;
+    
+}
+
+@keyframes big {
+    0%{
+          box-shadow: 2px 2px 3px rgb(141, 136, 136),-2px -2px 3px rgb(141, 136, 136);
+    }
+
+    100%{
+        box-shadow: 2px 2px 10px rgb(235, 224, 224),-2px -2px 10px rgb(235, 224, 224);
+    }
+}
+
+
+/* ====================== Error ====================== */
+
+.Error{
+    color: rgb(46, 44, 44);
+    
+}
+
+.Error h1{
+    font-size: 3rem;
+    text-shadow: 1px 1px 2px var(--react-dark-blue);
+}
+
+.Error p{
+    font-size: 1.5rem;
+    letter-spacing: 1.01px;
+}
+
+/* ====================== Edit ====================== */
+
+.Edit .tag1, .tag2 {
+    margin: 20px 10px;
+}
+
+.Apply{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 80px;
+}
+
+.Apply button{
+    padding: 10px;
+    width: 130px;
+    font-size: 0.85rem;
+    border: 2px solid var(--react-blue);
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.Apl{
+    color: rgb(12, 219, 12);
+}
+
+.Del{
+    color: rgb(199, 11, 11);
+}
+
+.High{
+    color: rgb(167, 167, 18);
+}   
+
+
+
+
+
+
+
